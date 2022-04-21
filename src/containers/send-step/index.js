@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import BackIcon from 'static/icons/back-icon.png';
 import Button, { SECONDARY, MEDIUM} from 'components/buttons/button';
 import TextInput from 'components/inputs/textInput';
+import AssetInput from './components/assetInput';
+import AssetModal from './components/assetModal';
+import { options } from './mockData';
+import { findOption } from './utils';
 
 import './send-step.css';
 
 const SendStep = () => {
+  const [selectedId, setSelectedId] = useState('eur');
+  const [isShow, setIsShow] = useState(false);
+  
+  const selectedCurrency = useMemo(() => findOption(selectedId, options), [selectedId]);
+
+  const handleSelectCurrency = id => {
+    setSelectedId(id);
+    setIsShow(false);
+  };
+  const handleCloseModal = () => {
+    setIsShow(false);
+  };
+  const handleOpenModal = () => {
+    setIsShow(true);
+  };
   const AmountActionIcon = <div className="st-max-icon">
     {'Max'}
   </div>;
+  
   return <div className="st-container">
+    {isShow && <AssetModal
+      options={options}
+      onSelect={handleSelectCurrency}
+      selectedId={selectedId}
+      onClose={handleCloseModal}
+    />}
     <div className="st-header">
       <img alt="back" src={BackIcon} className="st-back-icon" />
       <span className="st-header-title">{'Send Assets'}</span>
@@ -25,6 +51,13 @@ const SendStep = () => {
       <div className="st-form-row">
         <div className="st-form-label">{'to'}</div>
         <TextInput />
+      </div>
+      <div className="st-form-row">
+        <div className="st-form-label">{'asset'}</div>
+        <AssetInput
+          selectedCurrency={selectedCurrency}
+          onOpenModal={handleOpenModal}
+        />
       </div>
       <div className="st-form-row">
         <div className="st-group-label">

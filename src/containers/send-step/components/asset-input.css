@@ -1,0 +1,30 @@
+.r-asset-input-container {
+    display: flex;
+    border: 1px solid #C5CEE0;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 10px 16px;
+    align-items: center;
+    background-color: #ffffff;
+}
+.r-asset-info {
+    display: flex;
+    align-items: center;
+}
+.r-asset-currency-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.r-asset-currency-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #151A30;
+}
+.r-asset-option-icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-left: 16px;
+}

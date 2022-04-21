@@ -1,0 +1,91 @@
+.r-asset-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.ram-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #151A30;
+    opacity: 0.5;
+    z-index: 999;
+}
+.ram-main {
+    width: 336px;
+    height: 550px;
+    position: absolute;
+    left: calc(50% - 168px);
+    top: calc(50% - 275px);
+    background-color: #ffffff;
+    z-index: 1000;
+    border-radius: 8px;
+}
+.ram-header {
+    width: 100%;
+    padding: 24px 25px;
+    border-bottom: 1px solid #C5CEE0;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.ram-header-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #151A30;
+    line-height: 20px;
+}
+.ram-close-btn {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 27px;
+}
+.ram-item {
+    padding: 12px 20px;
+    margin-top: 8px;
+    display: flex;
+    background-color: #ffffff;
+}
+.ram-item.selected {
+    background-color: #EDF1F7;
+}
+.ram-currency-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+.ram-group {
+    display: flex;
+    align-items: center;
+}
+.ram-primary-value {
+    color: #151A30;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+.ram-secondary-value {
+    color: #8F9BB3;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+.ram-primary-currency {
+    color: #151A30;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 4px;
+}
+.ram-secondary-currency {
+    color: #151A30;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 4px;
+}
