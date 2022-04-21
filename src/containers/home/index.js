@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import AccountIcon from 'static/icons/account-icon.png';
 import CopyIcon from 'static/icons/copy-icon.png';
 import RoninLogo from 'static/icons/ronin-logo-white.png';
@@ -11,6 +12,10 @@ import YenIcon from 'static/icons/yen-icon.svg';
 import './home.css';
 
 const Home = () => {
+  const navigate = useNavigate();
+  const goToSendStep = () => {
+    navigate('/send-step');
+  };
   return <div>
     <div className="h-header">
       <div className="h-user-info">
@@ -51,7 +56,7 @@ const Home = () => {
         </div>
         <div className="h-action-btn">
           <div className="h-action-icon">
-            <img alt="send" className="h-send-icon" src={SendIcon} />
+            <img alt="send" className="h-send-icon" src={SendIcon} onClick={goToSendStep}/>
           </div>
           <div className="h-action-text">{'Send'}</div>
         </div>

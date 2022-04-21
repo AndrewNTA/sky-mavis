@@ -1,9 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import BackIcon from 'static/icons/back-icon.png';
+import { useNavigate } from 'react-router-dom';
 import Button, { SECONDARY, MEDIUM} from 'components/buttons/button';
 import TextInput from 'components/inputs/textInput';
 import AssetInput from './components/assetInput';
 import AssetModal from './components/assetModal';
+import SuccessModal from './components/successModal';
 import { options } from './mockData';
 import { findOption } from './utils';
 
@@ -12,6 +14,8 @@ import './send-step.css';
 const SendStep = () => {
   const [selectedId, setSelectedId] = useState('eur');
   const [isShow, setIsShow] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const navigate = useNavigate();
   
   const selectedCurrency = useMemo(() => findOption(selectedId, options), [selectedId]);
 
@@ -25,11 +29,21 @@ const SendStep = () => {
   const handleOpenModal = () => {
     setIsShow(true);
   };
+  const goHome = () => {
+    navigate('/');
+  };
+  const handleConfirm = () => {
+    goHome();
+  };
   const AmountActionIcon = <div className="st-max-icon">
     {'Max'}
   </div>;
   
   return <div className="st-container">
+    {isSuccess && <SuccessModal
+      onConfirm={handleConfirm}
+      currency={selectedCurrency ? selectedCurrency.primaryCurrency : ''}
+    />}
     {isShow && <AssetModal
       options={options}
       onSelect={handleSelectCurrency}
@@ -72,13 +86,13 @@ const SendStep = () => {
     <div className='st-control-group'>
       <Button
         size={MEDIUM}
-        onClick={() => {}}
+        onClick={goHome}
         text={'Cancel'}
         type={SECONDARY}
       />
       <Button
         size={MEDIUM}
-        onClick={() => {}}
+        onClick={() => { setIsSuccess(true); }}
         text={'Send'}
       />
     </div>
