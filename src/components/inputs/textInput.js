@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './text-input.css';
 
 const TextInput = props => {
-  const { type, readonly, actionIcon, defaultValue } = props;
+  const { type, readonly, actionIcon, defaultValue, ...otherProps } = props;
   return <div className={`r-text-input-container ${readonly && 'readonly'}`}>
     {
       readonly ?
@@ -11,6 +11,7 @@ const TextInput = props => {
           {defaultValue}
         </div> :
         <input
+          {...otherProps}
           type={type}
           className="r-text-input"
         />
