@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SendStep should render success modal 1`] = `
+<div
+  className="success-modal"
+>
+  <div
+    className="sm-overlay"
+  />
+  <div
+    className="sm-main"
+  >
+    <div
+      className="sm-title"
+    >
+      Successfully sent
+    </div>
+    <div
+      className="sm-content"
+    >
+      <div>
+        <span>
+          Your
+        </span>
+        <strong
+          className="sm-currency"
+        >
+          EUR
+        </strong>
+        <span>
+          has been sent!
+        </span>
+      </div>
+      <div>
+        Thank you for using our service
+      </div>
+    </div>
+    <button
+      className="r-primary-btn full"
+      onClick={[Function]}
+    >
+      OK
+    </button>
+  </div>
+</div>
+`;

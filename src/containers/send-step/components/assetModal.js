@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import formatCurrencyPrice from 'utils/formatCurrecyPrice';
+import formatCurrencyPrice from 'utils/formatCurrencyPrice';
 import CloseBtn from 'static/icons/close-icon.png';
 import './asset-modal.css';
 

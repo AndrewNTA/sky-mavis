@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SendStep should render asset input 1`] = `
+<div
+  className="r-asset-input-container"
+>
+  <div
+    className="r-asset-info"
+  >
+    <img
+      alt="USD"
+      className="r-asset-currency-icon"
+      src="icon_url"
+    />
+    <span
+      className="r-asset-currency-text"
+    >
+      USD
+    </span>
+  </div>
+  <img
+    alt="options"
+    className="r-asset-option-icon"
+    onClick={[Function]}
+    src="option-icon.png"
+  />
+</div>
+`;

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SendStep should render success modal 1`] = `
+<div
+  className="r-asset-modal"
+>
+  <div
+    className="ram-overlay"
+  />
+  <div
+    className="ram-main"
+  >
+    <div
+      className="ram-header"
+    >
+      <span
+        className="ram-header-title"
+      >
+        Assets
+      </span>
+      <img
+        alt="close"
+        className="ram-close-btn"
+        onClick={[Function]}
+        src="close-icon.png"
+      />
+    </div>
+    <div
+      className="ram-list"
+    >
+      <div
+        className="ram-item selected"
+        onClick={[Function]}
+      >
+        <img
+          alt="USD"
+          className="ram-currency-icon"
+          src="icon_url"
+        />
+        <div>
+          <div
+            className="ram-group"
+          >
+            <span
+              className="ram-primary-value"
+            >
+              10
+            </span>
+            <span
+              className="ram-primary-currency"
+            >
+              USD
+            </span>
+          </div>
+          <div
+            className="ram-group"
+          >
+            <span
+              className="ram-secondary-value"
+            >
+              1,000
+            </span>
+            <span
+              className="ram-secondary-currency"
+            >
+              VND
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
