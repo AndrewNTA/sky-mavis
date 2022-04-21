@@ -1,11 +1,44 @@
-.nav-menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 30px;
+.app-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.app-main-view {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+.app-overlay {
+  width: 100%;
+  height: 100%;
+  background: #dfdfdf;
+  display: none;
+}
+.diamond {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background: #0062af;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
 }
 
-.nav-item {
-  cursor: pointer;
-  color: lightgreen;
+
+@media screen and (min-width: 480px){
+  .app-main-view {
+    width: 375px;
+    height: 600px;
+    position: absolute;
+    top: calc(50vh - 300px);
+    left: calc(50% - 187px);
+    z-index: 1;
+  }
+  .app-overlay {
+    display: block;
+  }
 }
