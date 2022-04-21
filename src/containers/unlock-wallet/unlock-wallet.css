@@ -1,0 +1,56 @@
+.uw-container {
+    padding: 96px 20px 40px 20px;
+}
+.uw-header {
+    text-align: center;
+}
+.uw-logo {
+    width: 113px;
+    height: 160px;
+}
+.uw-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #151A30;
+    margin-top: 24px;
+}
+.uw-desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #151A30;
+    margin-top: 8px;
+}
+.uw-form {
+    padding-top: 24px;
+}
+.uw-form-title {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #57627B;
+    margin-bottom: 4px;
+    margin-left: 8px;
+}
+.r-input-container {
+    display: flex;
+    border: 1px solid #C5CEE0;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 10px 16px;
+    align-items: center;
+}
+.r-input-icon {
+    width: 20px;
+    margin-left: 16px;
+}
+.r-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #151A30;
+}
