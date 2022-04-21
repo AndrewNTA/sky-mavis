@@ -15,9 +15,7 @@ const UnlockWallet = () => {
       <div className="uw-form-title">{'Enter password'}</div>
       <div className="r-input-container">
         <input type="password" className="r-input" />
-        <div className="r-input-icon-wrapper">
-          <img className="r-input-icon" alt="show" src={EyeIcon} />
-        </div>
+        <img className="r-input-icon" alt="show" src={EyeIcon} />
       </div>
     </div>
   </div>;
