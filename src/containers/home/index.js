@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { useDispatch } from 'react-redux';
 import AccountIcon from 'static/icons/account-icon.png';
 import CopyIcon from 'static/icons/copy-icon.png';
 import RoninLogo from 'static/icons/ronin-logo-white.png';
@@ -8,11 +10,21 @@ import SendIcon from 'static/icons/send-icon.svg';
 import SwapIcon from 'static/icons/swap-icon.png';
 import EurIcon from 'static/icons/eur-icon.svg';
 import YenIcon from 'static/icons/yen-icon.svg';
+import { getAccountRequest } from './actions';
 
 import './home.css';
 
 const Home = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const actions = useMemo(() => bindActionCreators({
+    getAccountRequest,
+  }, dispatch), [dispatch]);
+
+  useEffect(() => {
+    actions.getAccountRequest();
+  }, []);
+  
   const goToSendStep = () => {
     navigate('/send-step');
   };
