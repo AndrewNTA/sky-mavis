@@ -1,21 +1,17 @@
 import React, { useMemo, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { useDispatch } from 'react-redux';
-import AccountIcon from 'static/icons/account-icon.png';
 import CopyIcon from 'static/icons/copy-icon.png';
 import RoninLogo from 'static/icons/ronin-logo-white.png';
-import CardIcon from 'static/icons/card-icon.png';
-import SendIcon from 'static/icons/send-icon.svg';
-import SwapIcon from 'static/icons/swap-icon.png';
 import EurIcon from 'static/icons/eur-icon.svg';
 import YenIcon from 'static/icons/yen-icon.svg';
+import ControlGroup from './components/controlGroup';
+import Header from './components/header';
 import { getAccountRequest } from './actions';
 
 import './home.css';
 
 const Home = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const actions = useMemo(() => bindActionCreators({
     getAccountRequest,
@@ -25,19 +21,9 @@ const Home = () => {
     actions.getAccountRequest();
   }, []);
   
-  const goToSendStep = () => {
-    navigate('/send-step');
-  };
+
   return <div>
-    <div className="h-header">
-      <div className="h-user-info">
-        <span className="h-dot-icon" />
-        <span className="h-user-name">{'Ronin Wallet'}</span>
-      </div>
-      <div className="h-user-account">
-        <img alt="account" className="h-account-icon" src={AccountIcon} />
-      </div>
-    </div>
+    <Header />
     <div className="h-main">
       <div className="h-card-container">
         <div className="h-card-top">
@@ -59,26 +45,7 @@ const Home = () => {
           <img alt="logo" className="h-logo" src={RoninLogo} />
         </div>
       </div>
-      <div className="h-control-group">
-        <div className="h-action-btn">
-          <div className="h-action-icon">
-            <img alt="card" className="h-card-icon" src={CardIcon} />
-          </div>
-          <div className="h-action-text">{'Deposit'}</div>
-        </div>
-        <div className="h-action-btn">
-          <div className="h-action-icon">
-            <img alt="send" className="h-send-icon" src={SendIcon} onClick={goToSendStep}/>
-          </div>
-          <div className="h-action-text">{'Send'}</div>
-        </div>
-        <div className="h-action-btn">
-          <div className="h-action-icon">
-            <img alt="swap" className="h-swap-icon" src={SwapIcon} />
-          </div>
-          <div className="h-action-text">{'Swap'}</div>
-        </div>
-      </div>
+      <ControlGroup />
     </div>
     <div className="h-assets">
       <div className="h-assets-title">{'Assets'}</div>

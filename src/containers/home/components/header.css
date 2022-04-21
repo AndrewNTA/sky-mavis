@@ -1,0 +1,41 @@
+.h-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.h-dot-icon {
+    height: 8px;
+    width: 8px;
+    background-color: #1273ea;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 12px;
+}
+.h-user-info {
+    display: flex;
+    align-items: center;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    padding-right: 19px;
+}
+.h-user-name {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+}
+.h-user-account {
+    background-color: #f7f9fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+.h-account-icon {
+    width: 14px;
+    height: 17px;
+    cursor: pointer;
+}
