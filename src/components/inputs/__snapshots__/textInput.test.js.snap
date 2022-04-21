@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput should render the data readonly 1`] = `
+<div
+  className="r-text-input-container readonly"
+>
+  <div
+    className="r-text-input-readonly"
+  >
+    Hello
+  </div>
+</div>
+`;
+
+exports[`TextInput should render the input type password 1`] = `
+<div
+  className="r-text-input-container false"
+>
+  <input
+    className="r-text-input"
+    type="password"
+  />
+</div>
+`;
+
+exports[`TextInput should render the input type text without action icon 1`] = `
+<div
+  className="r-text-input-container false"
+>
+  <input
+    className="r-text-input"
+    type="text"
+  />
+</div>
+`;
+
+exports[`TextInput should render the input with action icon 1`] = `
+<div
+  className="r-text-input-container false"
+>
+  <input
+    className="r-text-input"
+    type="text"
+  />
+  <div>
+    close
+  </div>
+</div>
+`;

@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SendStep should render send step page 1`] = `
+<div
+  className="st-container"
+>
+  <div
+    className="st-header"
+  >
+    <img
+      alt="back"
+      className="st-back-icon"
+      onClick={[Function]}
+      src="back-icon.png"
+    />
+    <span
+      className="st-header-title"
+    >
+      Send Assets
+    </span>
+  </div>
+  <div
+    className="st-form"
+  >
+    <div
+      className="st-form-row"
+    >
+      <div
+        className="st-form-label"
+      >
+        from
+      </div>
+      <div
+        className="r-text-input-container readonly"
+      >
+        <div
+          className="r-text-input-readonly"
+        >
+          My wallet (7300...3334)
+        </div>
+      </div>
+    </div>
+    <div
+      className="st-form-row"
+    >
+      <div
+        className="st-form-label"
+      >
+        to
+      </div>
+      <div
+        className="r-text-input-container false"
+      >
+        <input
+          className="r-text-input"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="st-form-row"
+    >
+      <div
+        className="st-form-label"
+      >
+        asset
+      </div>
+      <div
+        className="r-asset-input-container"
+      >
+        <div
+          className="r-asset-info"
+        >
+          <img
+            alt="EUR"
+            className="r-asset-currency-icon"
+            src="eur-icon.svg"
+          />
+          <span
+            className="r-asset-currency-text"
+          >
+            EUR
+          </span>
+        </div>
+        <img
+          alt="options"
+          className="r-asset-option-icon"
+          onClick={[Function]}
+          src="option-icon.png"
+        />
+      </div>
+    </div>
+    <div
+      className="st-form-row"
+    >
+      <div
+        className="st-group-label"
+      >
+        <div
+          className="st-form-label"
+        >
+          amount
+        </div>
+        <div
+          className="st-group-label-right"
+        >
+          <span>
+            available:
+          </span>
+          <span>
+             50 EUR
+          </span>
+        </div>
+      </div>
+      <div
+        className="r-text-input-container false"
+      >
+        <input
+          className="r-text-input"
+          type="text"
+        />
+        <div
+          className="st-max-icon"
+        >
+          Max
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="st-control-group"
+  >
+    <button
+      className="r-secondary-btn medium"
+      onClick={[Function]}
+    >
+      Cancel
+    </button>
+    <button
+      className="r-primary-btn medium"
+      onClick={[Function]}
+    >
+      Send
+    </button>
+  </div>
+</div>
+`;
