@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render the primary button with medium size 1`] = `
+<button
+  className="r-primary-btn medium"
+  onClick={[Function]}
+>
+  ok
+</button>
+`;
+
+exports[`Button should render the primary button with small size 1`] = `
+<button
+  className="r-primary-btn small"
+  onClick={[Function]}
+>
+  ok
+</button>
+`;
+
+exports[`Button should render the secondary button with full size 1`] = `
+<button
+  className="r-secondary-btn full"
+  onClick={[Function]}
+>
+  cancel
+</button>
+`;
