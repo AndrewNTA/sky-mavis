@@ -1,0 +1,27 @@
+.r-text-input-container {
+    display: flex;
+    border: 1px solid #C5CEE0;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 10px 16px;
+    align-items: center;
+    background-color: #ffffff;
+}
+.r-text-input-container.readonly {
+    background-color: #EDF1F7;
+}
+.r-text-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #151A30;
+}
+.r-text-input-readonly {
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8F9BB3;
+    min-height: 20px;
+}

@@ -2,10 +2,12 @@ import React from 'react';
 import Logo from 'static/icons/ronin-logo-blue.png';
 import EyeIcon from 'static/icons/open-eye-icon.png';
 import Button from 'components/buttons/button';
+import TextInput from 'components/inputs/textInput';
 
 import './unlock-wallet.css';
 
 const UnlockWallet = () => {
+  const ActionComponent = <img className="uw-eye-icon" alt="show" src={EyeIcon} />;
   return <div className="uw-container">
     <div className="uw-header">
       <img className="uw-logo" alt="ronin" src={Logo} />
@@ -14,10 +16,7 @@ const UnlockWallet = () => {
     </div>
     <div className="uw-form">
       <div className="uw-form-title">{'Enter password'}</div>
-      <div className="r-input-container">
-        <input type="password" className="r-input" />
-        <img className="r-input-icon" alt="show" src={EyeIcon} />
-      </div>
+      <TextInput type="password" actionIcon={ActionComponent} />
       <div className="uw-control">
         <Button onClick={() => {}} text={'Unlock'} />
       </div>
