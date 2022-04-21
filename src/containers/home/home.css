@@ -1,10 +1,10 @@
-.home-header {
+.h-header {
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.home-dot-icon {
+.h-dot-icon {
     height: 8px;
     width: 8px;
     background-color: #1273ea;
@@ -12,19 +12,19 @@
     display: inline-block;
     margin: 12px;
 }
-.home-user-info {
+.h-user-info {
     display: flex;
     align-items: center;
     background-color: #f7f9fc;
     border-radius: 8px;
     padding-right: 19px;
 }
-.home-user-name {
+.h-user-name {
     font-weight: 700;
     font-size: 12px;
     line-height: 20px;
 }
-.home-user-account {
+.h-user-account {
     background-color: #f7f9fc;
     display: flex;
     align-items: center;
@@ -34,78 +34,78 @@
     height: 32px;
     cursor: pointer;
 }
-.home-account-icon {
+.h-account-icon {
     width: 14px;
     height: 17px;
     cursor: pointer;
 }
-.home-main {
+.h-main {
     padding: 0 20px;
 }
-.home-card-container {
+.h-card-container {
     background: linear-gradient(256.28deg, #1C94F4 0%, #1273EA 100%);
     border-radius: 16px;
     padding: 18px 20px;
     box-shadow: 0px 12px 20px -4px #C5CEE0;
 }
-.home-card-top {
+.h-card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 18px;
     border-bottom: 1px solid #68b8f8;
 }
-.home-card-wallet-title {
+.h-card-wallet-title {
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
     color: #ffffff;
     margin-right: 8px;
 }
-.home-card-number {
+.h-card-number {
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
     color: #8dc9f9;
 }
-.home-copy-icon {
+.h-copy-icon {
     width: 14px;
     height: 14px;
 }
-.home-card-bottom {
+.h-card-bottom {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     padding-top: 12px;
 }
-.home-currency-first {
+.h-currency-first {
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
     color: #ffffff;
     margin-bottom: 4px;
 }
-.home-currency-second {
+.h-currency-second {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     color: #8dc9f9;
 }
-.home-logo {
+.h-logo {
     width: 28px;
     height: 40px;
 }
-.home-control-group {
+.h-control-group {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 28px;
 }
-.home-action-btn {
+.h-action-btn {
     margin: 0 12px;
     text-align: center;
 }
-.home-action-icon {
+.h-action-icon {
     width: 48px;
     height: 48px;
     display: flex;
@@ -115,35 +115,35 @@
     background-color: #f7f9fc;
     cursor: pointer;
 }
-.home-card-icon {
+.h-card-icon {
     width: 26px;
 }
-.home-send-icon {
+.h-send-icon {
     width: 24px;
 }
-.home-swap-icon {
+.h-swap-icon {
     width: 25px;
 }
-.home-action-text {
+.h-action-text {
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
     color: #151A30;
     margin-top: 4px;
 }
-.home-action-text:hover {
+.h-action-text:hover {
     font-weight: 600;
 }
-.home-assets {
+.h-assets {
     padding: 20px;
 }
-.home-assets-title {
+.h-assets-title {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
     margin-bottom: 12px;
 }
-.home-assets-item {
+.h-assets-item {
     display: flex;
     align-items: center;
     padding: 16px 20px;
@@ -151,19 +151,19 @@
     border-radius: 8px;
     margin-bottom: 8px;
 }
-.home-currency-icon {
+.h-currency-icon {
     width: 32px;
     height: 32px;
     margin-right: 20px;
 }
-.home-item-first-line {
+.h-item-first-line {
     font-weight: 600;
     font-size: 14px;
     color: #151A30;
     line-height: 20px;
     margin-bottom: 4px;
 }
-.home-item-second-line {
+.h-item-second-line {
     font-weight: 400;
     font-size: 12px;
     color: #8f9bb3;

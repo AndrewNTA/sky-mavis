@@ -12,71 +12,71 @@ import './home.css';
 
 const Home = () => {
   return <div>
-    <div className="home-header">
-      <div className="home-user-info">
-        <span className="home-dot-icon" />
-        <span className="home-user-name">{'Ronin Wallet'}</span>
+    <div className="h-header">
+      <div className="h-user-info">
+        <span className="h-dot-icon" />
+        <span className="h-user-name">{'Ronin Wallet'}</span>
       </div>
-      <div className="home-user-account">
-        <img alt="account" className="home-account-icon" src={AccountIcon} />
+      <div className="h-user-account">
+        <img alt="account" className="h-account-icon" src={AccountIcon} />
       </div>
     </div>
-    <div className="home-main">
-      <div className="home-card-container">
-        <div className="home-card-top">
+    <div className="h-main">
+      <div className="h-card-container">
+        <div className="h-card-top">
           <div>
-            <span className="home-card-wallet-title">{'My wallet'}</span>
-            <span className="home-card-number">{'(7300 3700 3800 3334)'}</span>
+            <span className="h-card-wallet-title">{'My wallet'}</span>
+            <span className="h-card-number">{'(7300 3700 3800 3334)'}</span>
           </div>
-          <img alt="copy" className="home-copy-icon" src={CopyIcon} />
+          <img alt="copy" className="h-copy-icon" src={CopyIcon} />
         </div>
-        <div className="home-card-bottom">
+        <div className="h-card-bottom">
           <div>
-            <div className="home-currency-first">
+            <div className="h-currency-first">
               {'1,000 USD'}
             </div>
-            <div className="home-currency-second">
+            <div className="h-currency-second">
               {'23,046,000 VND'}
             </div>
           </div>
-          <img alt="logo" className="home-logo" src={RoninLogo} />
+          <img alt="logo" className="h-logo" src={RoninLogo} />
         </div>
       </div>
-      <div className="home-control-group">
-        <div className="home-action-btn">
-          <div className="home-action-icon">
-            <img alt="card" className="home-card-icon" src={CardIcon} />
+      <div className="h-control-group">
+        <div className="h-action-btn">
+          <div className="h-action-icon">
+            <img alt="card" className="h-card-icon" src={CardIcon} />
           </div>
-          <div className="home-action-text">{'Deposit'}</div>
+          <div className="h-action-text">{'Deposit'}</div>
         </div>
-        <div className="home-action-btn">
-          <div className="home-action-icon">
-            <img alt="send" className="home-send-icon" src={SendIcon} />
+        <div className="h-action-btn">
+          <div className="h-action-icon">
+            <img alt="send" className="h-send-icon" src={SendIcon} />
           </div>
-          <div className="home-action-text">{'Send'}</div>
+          <div className="h-action-text">{'Send'}</div>
         </div>
-        <div className="home-action-btn">
-          <div className="home-action-icon">
-            <img alt="swap" className="home-swap-icon" src={SwapIcon} />
+        <div className="h-action-btn">
+          <div className="h-action-icon">
+            <img alt="swap" className="h-swap-icon" src={SwapIcon} />
           </div>
-          <div className="home-action-text">{'Swap'}</div>
+          <div className="h-action-text">{'Swap'}</div>
         </div>
       </div>
     </div>
-    <div className="home-assets">
-      <div className="home-assets-title">{'Assets'}</div>
-      <div className="home-assets-item">
-        <img alt="eur" className="home-currency-icon" src={EurIcon} />
+    <div className="h-assets">
+      <div className="h-assets-title">{'Assets'}</div>
+      <div className="h-assets-item">
+        <img alt="eur" className="h-currency-icon" src={EurIcon} />
         <div>
-          <div className="home-item-first-line">{'50 EUR'}</div>
-          <div className="home-item-second-line">{'1,531,972 VND'}</div>
+          <div className="h-item-first-line">{'50 EUR'}</div>
+          <div className="h-item-second-line">{'1,531,972 VND'}</div>
         </div>
       </div>
-      <div className="home-assets-item">
-        <img alt="yen" className="home-currency-icon" src={YenIcon} />
+      <div className="h-assets-item">
+        <img alt="yen" className="h-currency-icon" src={YenIcon} />
         <div>
-          <div className="home-item-first-line">{'10,000 YEN'}</div>
-          <div className="home-item-second-line">{'2,103,317 VND'}</div>
+          <div className="h-item-first-line">{'10,000 YEN'}</div>
+          <div className="h-item-second-line">{'2,103,317 VND'}</div>
         </div>
       </div>
     </div>
