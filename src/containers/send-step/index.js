@@ -76,7 +76,12 @@ const SendStep = () => {
       <div className="st-form-row">
         <div className="st-group-label">
           <div className="st-form-label">{'amount'}</div>
-          <div className="st-group-label-right">{'available: 50 EUR'}</div>
+          <div className="st-group-label-right">
+            <span>{'available:'}</span>
+            <span>{
+              selectedCurrency ? ` ${selectedCurrency.primaryValue} ${selectedCurrency.primaryCurrency}` : ''
+            }</span>
+          </div>
         </div>
         <TextInput
           actionIcon={AmountActionIcon}
