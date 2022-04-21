@@ -34,6 +34,10 @@
     margin-bottom: 4px;
     margin-left: 8px;
 }
+.uw-control {
+    margin-top: 24px;
+    text-align: center;
+}
 .r-input-container {
     display: flex;
     border: 1px solid #C5CEE0;

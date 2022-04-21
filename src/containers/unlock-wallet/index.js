@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from 'static/icons/ronin-logo-blue.png';
 import EyeIcon from 'static/icons/open-eye-icon.png';
+import Button from 'components/buttons/button';
 
 import './unlock-wallet.css';
 
@@ -16,6 +17,9 @@ const UnlockWallet = () => {
       <div className="r-input-container">
         <input type="password" className="r-input" />
         <img className="r-input-icon" alt="show" src={EyeIcon} />
+      </div>
+      <div className="uw-control">
+        <Button onClick={() => {}} text={'Unlock'} />
       </div>
     </div>
   </div>;
