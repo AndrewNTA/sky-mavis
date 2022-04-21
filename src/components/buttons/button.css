@@ -1,0 +1,34 @@
+.r-primary-btn {
+    background: linear-gradient(256.28deg, #1C94F4 0%, #1273EA 100%);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.r-secondary-btn {
+    border-radius: 8px;
+    color: #1273EA;
+    background-color: #F7F9FC;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    text-align: center;
+}
+.r-primary-btn.small, .r-secondary-btn.small{
+    width: 88px;
+}
+.r-primary-btn.medium, .r-secondary-btn.medium {
+    width: 160px;
+}
+.r-primary-btn.full, .r-secondary-btn.full {
+    width: 100%;
+}
