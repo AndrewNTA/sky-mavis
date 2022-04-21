@@ -51,7 +51,7 @@ const SendStep = () => {
       onClose={handleCloseModal}
     />}
     <div className="st-header">
-      <img alt="back" src={BackIcon} className="st-back-icon" />
+      <img alt="back" src={BackIcon} className="st-back-icon" onClick={goHome}/>
       <span className="st-header-title">{'Send Assets'}</span>
     </div>
     <div className="st-form">
