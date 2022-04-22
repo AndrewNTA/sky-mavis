@@ -6,6 +6,7 @@ import {
   GET_ACCOUNT_SUCCESS,
   GET_ACCOUNT_FAILED
 } from './actions';
+import { SEND_ASSET_SUCCESS } from '../send-step/actions';
 
 const initialState = {
   asset: [],
@@ -50,10 +51,12 @@ const homeReducer = (state = initialState, action) => {
       ...state,
       loading: true,
     };
+  case SEND_ASSET_SUCCESS:
   case GET_ACCOUNT_SUCCESS:
     return {
       assets: mapResponse(action.response),
       loading: false,
+      error: ''
     };
   case GET_ACCOUNT_FAILED:
     return {

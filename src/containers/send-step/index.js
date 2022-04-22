@@ -1,23 +1,42 @@
 import React, { useState, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import BackIcon from 'static/icons/back-icon.png';
 import { useNavigate } from 'react-router-dom';
 import Button, { SECONDARY, MEDIUM} from 'components/buttons/button';
 import TextInput from 'components/inputs/textInput';
-import { options } from 'mockData';
 import AssetInput from './components/assetInput';
 import AssetModal from './components/assetModal';
 import SuccessModal from './components/successModal';
 import { findOption } from './utils';
+import { sendAssetRequest, resetData } from './actions';
 
 import './send-step.css';
+import isEmpty from '../../utils/isEmpty';
 
 const SendStep = () => {
   const [selectedId, setSelectedId] = useState('eur');
   const [isShow, setIsShow] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const navigate = useNavigate();
+  const [toAddress, setToAddress] = useState('');
+  const [valueInput, setValueInput] = useState('');
   
-  const selectedCurrency = useMemo(() => findOption(selectedId, options), [selectedId]);
+  const navigate = useNavigate();
+  const goHome = () => {
+    navigate('/');
+  };
+
+  const dispatch = useDispatch();
+  const actions = useMemo(() => bindActionCreators({
+    sendAssetRequest,
+    resetData,
+  }, dispatch), [dispatch]);
+  const assetsList = useSelector(state => state.home?.assets) || [];
+  const isSuccess = useSelector(state => state.sendStep?.success);
+  if (isEmpty(assetsList)) {
+    goHome();
+  }
+  
+  const selectedCurrency = useMemo(() => findOption(selectedId, assetsList), [selectedId, assetsList]);
 
   const handleSelectCurrency = id => {
     setSelectedId(id);
@@ -29,13 +48,42 @@ const SendStep = () => {
   const handleOpenModal = () => {
     setIsShow(true);
   };
-  const goHome = () => {
-    navigate('/');
-  };
   const handleConfirm = () => {
+    actions.resetData();
     goHome();
   };
-  const AmountActionIcon = <div className="st-max-icon">
+  const handleSetMax = () => {
+    setValueInput(selectedCurrency.primaryValue);
+  };
+  const handleChangeValue = e => {
+    const re = /^[0-9\b]+$/;
+
+    if (e.target.value === '' || re.test(e.target.value)) {
+      setValueInput(e.target.value);
+    }
+  };
+  const handleSend = () => {
+    if (!toAddress) {
+      alert('Please enter the receive address');
+      return;
+    }
+    if (!valueInput) {
+      alert('Please enter the amount');
+      return;
+    }
+    const value = parseInt(valueInput);
+    if (value > selectedCurrency.primaryValue) {
+      alert('Please enter the amount do not exceed max amount');
+      return;
+    }
+    const postData = {
+      id: selectedId,
+      value,
+    };
+    actions.sendAssetRequest(postData);
+  };
+
+  const AmountActionIcon = <div className="st-max-icon" onClick={handleSetMax}>
     {'Max'}
   </div>;
   
@@ -45,7 +93,7 @@ const SendStep = () => {
       currency={selectedCurrency ? selectedCurrency.primaryCurrency : ''}
     />}
     {isShow && <AssetModal
-      options={options}
+      options={assetsList}
       onSelect={handleSelectCurrency}
       selectedId={selectedId}
       onClose={handleCloseModal}
@@ -64,7 +112,10 @@ const SendStep = () => {
       </div>
       <div className="st-form-row">
         <div className="st-form-label">{'to'}</div>
-        <TextInput />
+        <TextInput
+          value={toAddress}
+          onChange={e => { setToAddress(e.target.value);}}
+        />
       </div>
       <div className="st-form-row">
         <div className="st-form-label">{'asset'}</div>
@@ -84,6 +135,8 @@ const SendStep = () => {
           </div>
         </div>
         <TextInput
+          value={valueInput}
+          onChange={handleChangeValue}
           actionIcon={AmountActionIcon}
         />
       </div>
@@ -97,7 +150,7 @@ const SendStep = () => {
       />
       <Button
         size={MEDIUM}
-        onClick={() => { setIsSuccess(true); }}
+        onClick={handleSend}
         text={'Send'}
       />
     </div>
