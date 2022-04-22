@@ -25,8 +25,7 @@ const Home = () => {
   const loading = useSelector(state => state.home?.loading);
 
   const firstAsset = !isEmpty(assetsList) ? assetsList[0] : null;
-  console.log('data ===>', assetsList);
-  const restAssets = !isEmpty(assetsList) ? assetsList.slice(1) : [];
+  const restAssets = !isEmpty(assetsList) && Array.isArray(assetsList) ? assetsList.slice(1) : [];
 
   return <div>
     <Header />

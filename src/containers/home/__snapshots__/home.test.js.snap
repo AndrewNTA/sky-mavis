@@ -23,7 +23,9 @@ exports[`Home should render home page 1`] = `
       <img
         alt="account"
         className="h-account-icon"
+        onClick={[Function]}
         src="account-icon.png"
+        title="Logout"
       />
     </div>
   </div>
@@ -61,12 +63,12 @@ exports[`Home should render home page 1`] = `
           <div
             className="h-currency-first"
           >
-            1,000 USD
+            ____ ___
           </div>
           <div
             className="h-currency-second"
           >
-            23,046,000 VND
+            ______ ___
           </div>
         </div>
         <img
@@ -145,44 +147,40 @@ exports[`Home should render home page 1`] = `
       Assets
     </div>
     <div
-      className="h-assets-item"
+      className="la-item"
     >
-      <img
-        alt="eur"
-        className="h-currency-icon"
-        src="eur-icon.svg"
+      <div
+        className="la-icon"
       />
       <div>
         <div
-          className="h-item-first-line"
+          className="la-first-line"
         >
-          50 EUR
+          ____ ___
         </div>
         <div
-          className="h-item-second-line"
+          className="la-second-line"
         >
-          1,531,972 VND
+          ______ ___
         </div>
       </div>
     </div>
     <div
-      className="h-assets-item"
+      className="la-item"
     >
-      <img
-        alt="yen"
-        className="h-currency-icon"
-        src="yen-icon.svg"
+      <div
+        className="la-icon"
       />
       <div>
         <div
-          className="h-item-first-line"
+          className="la-first-line"
         >
-          10,000 YEN
+          ____ ___
         </div>
         <div
-          className="h-item-second-line"
+          className="la-second-line"
         >
-          2,103,317 VND
+          ______ ___
         </div>
       </div>
     </div>
