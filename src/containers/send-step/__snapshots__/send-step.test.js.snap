@@ -5,6 +5,48 @@ exports[`SendStep should render send step page 1`] = `
   className="st-container"
 >
   <div
+    className="success-modal"
+  >
+    <div
+      className="sm-overlay"
+    />
+    <div
+      className="sm-main"
+    >
+      <div
+        className="sm-title"
+      >
+        Successfully sent
+      </div>
+      <div
+        className="sm-content"
+      >
+        <div>
+          <span>
+            Your
+          </span>
+          <strong
+            className="sm-currency"
+          >
+            
+          </strong>
+          <span>
+            has been sent!
+          </span>
+        </div>
+        <div>
+          Thank you for using our service
+        </div>
+      </div>
+      <button
+        className="r-primary-btn full"
+        onClick={[Function]}
+      >
+        OK
+      </button>
+    </div>
+  </div>
+  <div
     className="st-header"
   >
     <img
@@ -53,7 +95,9 @@ exports[`SendStep should render send step page 1`] = `
       >
         <input
           className="r-text-input"
+          onChange={[Function]}
           type="text"
+          value=""
         />
       </div>
     </div>
@@ -70,18 +114,7 @@ exports[`SendStep should render send step page 1`] = `
       >
         <div
           className="r-asset-info"
-        >
-          <img
-            alt="EUR"
-            className="r-asset-currency-icon"
-            src="eur-icon.svg"
-          />
-          <span
-            className="r-asset-currency-text"
-          >
-            EUR
-          </span>
-        </div>
+        />
         <img
           alt="options"
           className="r-asset-option-icon"
@@ -108,7 +141,7 @@ exports[`SendStep should render send step page 1`] = `
             available:
           </span>
           <span>
-             50 EUR
+            
           </span>
         </div>
       </div>
@@ -117,10 +150,13 @@ exports[`SendStep should render send step page 1`] = `
       >
         <input
           className="r-text-input"
+          onChange={[Function]}
           type="text"
+          value=""
         />
         <div
           className="st-max-icon"
+          onClick={[Function]}
         >
           Max
         </div>

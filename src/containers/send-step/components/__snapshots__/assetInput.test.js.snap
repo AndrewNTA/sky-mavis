@@ -6,18 +6,7 @@ exports[`SendStep should render asset input 1`] = `
 >
   <div
     className="r-asset-info"
-  >
-    <img
-      alt="USD"
-      className="r-asset-currency-icon"
-      src="icon_url"
-    />
-    <span
-      className="r-asset-currency-text"
-    >
-      USD
-    </span>
-  </div>
+  />
   <img
     alt="options"
     className="r-asset-option-icon"
