@@ -36,7 +36,7 @@ const SendStep = () => {
     goHome();
   }
   
-  const selectedCurrency = useMemo(() => findOption(selectedId, assetsList), [selectedId, assetsList]);
+  const selectedAsset = useMemo(() => findOption(selectedId, assetsList), [selectedId, assetsList]);
 
   const handleSelectCurrency = id => {
     setSelectedId(id);
@@ -53,7 +53,7 @@ const SendStep = () => {
     goHome();
   };
   const handleSetMax = () => {
-    setValueInput(selectedCurrency.primaryValue);
+    setValueInput(selectedAsset.primaryValue);
   };
   const handleChangeValue = e => {
     const re = /^[0-9\b]+$/;
@@ -72,7 +72,7 @@ const SendStep = () => {
       return;
     }
     const value = parseInt(valueInput);
-    if (value > selectedCurrency.primaryValue) {
+    if (value > selectedAsset.primaryValue) {
       alert('Please enter the amount do not exceed max amount');
       return;
     }
@@ -90,7 +90,7 @@ const SendStep = () => {
   return <div className="st-container">
     {isSuccess && <SuccessModal
       onConfirm={handleConfirm}
-      currency={selectedCurrency ? selectedCurrency.primaryCurrency : ''}
+      currency={selectedAsset ? selectedAsset.primaryCurrency : ''}
     />}
     {isShow && <AssetModal
       options={assetsList}
@@ -120,7 +120,7 @@ const SendStep = () => {
       <div className="st-form-row">
         <div className="st-form-label">{'asset'}</div>
         <AssetInput
-          selectedCurrency={selectedCurrency}
+          selectedAsset={selectedAsset}
           onOpenModal={handleOpenModal}
         />
       </div>
@@ -130,7 +130,7 @@ const SendStep = () => {
           <div className="st-group-label-right">
             <span>{'available:'}</span>
             <span>{
-              selectedCurrency ? ` ${selectedCurrency.primaryValue} ${selectedCurrency.primaryCurrency}` : ''
+              selectedAsset ? ` ${selectedAsset.primaryValue} ${selectedAsset.primaryCurrency}` : ''
             }</span>
           </div>
         </div>

@@ -4,16 +4,16 @@ import OptionIcon from 'static/icons/option-icon.png';
 
 import './asset-input.css';
 
-const AssetInput = ({ selectedCurrency, onOpenModal }) => {
+const AssetInput = ({ selectedAsset, onOpenModal }) => {
   return <div className="r-asset-input-container">
     <div className="r-asset-info">
-      {selectedCurrency && <>
+      {selectedAsset && <>
         <img
-          alt={selectedCurrency.primaryCurrency}
+          alt={selectedAsset.primaryCurrency}
           className="r-asset-currency-icon"
-          src={selectedCurrency.icon}
+          src={selectedAsset.icon}
         />
-        <span className="r-asset-currency-text">{selectedCurrency.primaryCurrency}</span>
+        <span className="r-asset-currency-text">{selectedAsset.primaryCurrency}</span>
       </>}
     </div>
     <img
@@ -25,7 +25,7 @@ const AssetInput = ({ selectedCurrency, onOpenModal }) => {
   </div>;
 };
 AssetInput.propTypes = {
-  selectedCurrency: PropTypes.shape({
+  selectedAsset: PropTypes.shape({
     primaryCurrency: PropTypes.string,
     icon: PropTypes.string,
   }),
