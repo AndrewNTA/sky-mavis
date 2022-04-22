@@ -1,15 +1,15 @@
 import React, { useMemo, useEffect } from 'react';
 import { bindActionCreators } from 'redux';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CopyIcon from 'static/icons/copy-icon.png';
 import RoninLogo from 'static/icons/ronin-logo-white.png';
-import EurIcon from 'static/icons/eur-icon.svg';
-import YenIcon from 'static/icons/yen-icon.svg';
+import isEmpty from 'utils/isEmpty';
 import ControlGroup from './components/controlGroup';
 import Header from './components/header';
 import { getAccountRequest } from './actions';
 
 import './home.css';
+import LoadingAsset from './components/loading';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,12 @@ const Home = () => {
   useEffect(() => {
     actions.getAccountRequest();
   }, []);
-  
+
+  const assetsList = useSelector(state => state.home?.assets);
+  const loading = useSelector(state => state.home?.loading);
+
+  const firstAsset = !isEmpty(assetsList) ? assetsList[0] : null;
+  const restAssets = !isEmpty(assetsList) ? assetsList.slice(1) : [];
 
   return <div>
     <Header />
@@ -36,10 +41,16 @@ const Home = () => {
         <div className="h-card-bottom">
           <div>
             <div className="h-currency-first">
-              {'1,000 USD'}
+              {loading || isEmpty(firstAsset) ?
+                '____ ___' :
+                `${firstAsset.primaryValue} ${firstAsset.primaryCurrency}`
+              }
             </div>
             <div className="h-currency-second">
-              {'23,046,000 VND'}
+              {loading || isEmpty(firstAsset) ?
+                '______ ___' :
+                `${firstAsset.secondaryValue} ${firstAsset.secondaryCurrency}`
+              }
             </div>
           </div>
           <img alt="logo" className="h-logo" src={RoninLogo} />
@@ -49,20 +60,16 @@ const Home = () => {
     </div>
     <div className="h-assets">
       <div className="h-assets-title">{'Assets'}</div>
-      <div className="h-assets-item">
-        <img alt="eur" className="h-currency-icon" src={EurIcon} />
-        <div>
-          <div className="h-item-first-line">{'50 EUR'}</div>
-          <div className="h-item-second-line">{'1,531,972 VND'}</div>
+      {loading || isEmpty(restAssets) ?
+        <LoadingAsset /> :
+        restAssets.map(a => <div key={a.id} className="h-assets-item">
+          <img alt="eur" className="h-currency-icon" src={a.icon} />
+          <div>
+            <div className="h-item-first-line">{`${a.primaryValue} ${a.primaryCurrency}`}</div>
+            <div className="h-item-second-line">{`${a.secondaryValue} ${a.secondaryCurrency}`}</div>
+          </div>
         </div>
-      </div>
-      <div className="h-assets-item">
-        <img alt="yen" className="h-currency-icon" src={YenIcon} />
-        <div>
-          <div className="h-item-first-line">{'10,000 YEN'}</div>
-          <div className="h-item-second-line">{'2,103,317 VND'}</div>
-        </div>
-      </div>
+        )}
     </div>
   </div>;
 };

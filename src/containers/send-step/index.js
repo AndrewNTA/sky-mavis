@@ -3,10 +3,10 @@ import BackIcon from 'static/icons/back-icon.png';
 import { useNavigate } from 'react-router-dom';
 import Button, { SECONDARY, MEDIUM} from 'components/buttons/button';
 import TextInput from 'components/inputs/textInput';
+import { options } from 'mockData';
 import AssetInput from './components/assetInput';
 import AssetModal from './components/assetModal';
 import SuccessModal from './components/successModal';
-import { options } from './mockData';
 import { findOption } from './utils';
 
 import './send-step.css';
